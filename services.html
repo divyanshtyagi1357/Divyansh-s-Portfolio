@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: monospace;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 50);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(131, 131, 199);
+        }
+
+        /* Services Section */
+
+.services-section {
+    min-height: calc(100vh - 80px);
+    background-color: rgb(0, 0, 70);
+    padding: 60px 10%;
+}
+
+.services-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgb(200, 200, 255);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgb(0, 0, 50);
+    border: 2px solid rgb(170, 107, 228);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(170, 107, 228, 0.5);
+}
+
+.service-card h2 {
+    color: rgb(170, 107, 228);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: rgb(220, 220, 220);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .services-section {
+        padding: 40px 20px;
+    }
+
+    .services-section h1 {
+        font-size: 2.3rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Divyansh's Portfolio</div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-section">
+
+            <h1>My Services</h1>
+            <p class="subtitle">
+                I provide creative and technical solutions to help bring your ideas to life.
+            </p>
+
+            <div class="services-container">
+
+                <div class="service-card">
+                    <h2>🌐 Web Development</h2>
+                    <p>
+                        Responsive and modern websites built using HTML, CSS,
+                        JavaScript, and other latest technologies.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h2>🎬 Video Editing</h2>
+                    <p>
+                        Professional video editing for YouTube, social media,
+                        promotional videos, and personal projects.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h2>📱 Responsive Design</h2>
+                    <p>
+                        Mobile-friendly websites that work perfectly across
+                        desktops, tablets, and smartphones.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h2>⚡ Website Optimization</h2>
+                    <p>
+                        Improving website performance, speed, and user
+                        experience for better engagement.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h2>🎨 UI Design</h2>
+                    <p>
+                        Creating clean and attractive user interfaces that
+                        enhance the user experience.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h2>🚀 Portfolio Websites</h2>
+                    <p>
+                        Custom portfolio websites for students, freelancers,
+                        and professionals.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

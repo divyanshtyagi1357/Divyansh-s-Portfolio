@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh's Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 50);
+        }
+
+        .left {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(170, 107, 228);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: calc(100vh - 80px);
+            background-color: rgb(0, 0, 70);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 10%;
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-content span {
+            color: rgb(170, 107, 228);
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            color: rgb(210, 210, 255);
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: rgb(220, 220, 220);
+            margin-bottom: 35px;
+        }
+
+        /* Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn,
+        .btn-outline {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn {
+            background-color: rgb(170, 107, 228);
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: rgb(145, 85, 200);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid rgb(170, 107, 228);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: rgb(170, 107, 228);
+        }
+
+        /* Image Section */
+        .hero-image {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+            background: transparent;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 20px;
+                gap: 40px;
+            }
+
+            .hero-content,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                max-width: 280px;
+                background: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Divyansh's Portfolio</div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Divyansh</span></h1>
+
+                <h2>Frontend Developer & Video Editor</h2>
+
+                <p>
+                    I create modern, responsive websites and engaging video
+                    content that help brands and individuals stand out in the
+                    digital world.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="_blank" class="btn" target="_blank">View Projects</a>
+                    <a href="contact.html" class="btn-outline">Contact Me</a>
+
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images.png" alt="">
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

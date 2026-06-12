@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: monospace;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 50);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(131, 131, 199);
+        }
+
+
+
+        .timeline-section {
+            background: rgb(0, 0, 33);
+            color: white;
+            padding: 80px 50px;
+            min-height: 100vh;
+        }
+
+        .timeline-section h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+        }
+
+        .timeline {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+        }
+
+        .timeline-item {
+            width: 15%;
+            position: relative;
+            padding-top: 50px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 1px;
+            height: 95px;
+            background: white;
+        }
+
+        .icon {
+            position: absolute;
+            top: -5px;
+            left: -10px;
+            font-size: 24px;
+        }
+
+        .content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .content p {
+            color: gray;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .timeline {
+                flex-direction: column;
+            }
+
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-item {
+                width: 100%;
+                margin-bottom: 50px;
+                padding-left: 40px;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+                height: 100%;
+            }
+
+            .icon {
+                left: 0;
+                top: 0;
+            }
+        }
+
+
+
+        #about h1 {
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: white;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-content {
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(170, 107, 228, 0.3);
+            box-shadow: 0 0 25px rgba(170, 107, 228, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .about-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-content h2 {
+            color: rgb(170, 107, 228);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: rgb(180, 180, 180);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: rgb(170, 107, 228);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: rgb(140, 80, 210);
+            box-shadow: 0 0 15px rgba(170, 107, 228, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #about {
+                padding: 60px 6%;
+            }
+
+            #about h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                padding: 25px;
+            }
+
+            .about-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .about-content p {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">Divyansh's Portfolio</div>
+
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="timeline-section">
+        <h1>Work Experience</h1>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="icon">🎮</div>
+                <div class="content">
+                    <h3>HTML Developer (2025-2026)</h3>
+                    <p>
+                    <p>
+                        Passionate HTML Developer focused on building responsive, accessible, and visually appealing
+                        websites with clean and efficient code.
+                    </p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="icon">📘</div>
+                <div class="content">
+                    <h3>Node.js Developer (little but sufficient experience)</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="icon">📸</div>
+                <div class="content">
+                    <h3>Video Editing (2024-2026)</h3>
+                    <p>Passionate about video editing, I turn raw footage into captivating visual experiences through
+                        creative storytelling, smooth transitions, color grading, and professional post-production
+                        techniques.</p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <div class="icon">▶️</div>
+                <div class="content">
+                    <h3>Software Developer(Python) – YouTube (2023-2026)</h3>
+                    <p>creates engaging content for YouTube channels, focusing on storytelling and audience engagement.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="icon">
+        <i class="fab fa-instagram"></i>
+    </div>
+
+
+    <div class="icon">
+        <i class="fab fa-youtube"></i>
+    </div>
+
+
+    <section id="about">
+        <h1>About Me</h1>
+
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Hello, I'm Divyansh</h2>
+
+                <p>
+                    I am a passionate Web Developer with a strong interest in creating
+                    modern, responsive, and user-friendly websites. I enjoy transforming
+                    ideas into interactive digital experiences using clean and efficient code.
+                </p>
+
+                <p>
+                    My expertise includes HTML, CSS, JavaScript, and front-end development.
+                    I continuously learn new technologies and frameworks to improve my
+                    skills and stay updated with industry trends.
+                </p>
+
+                <p>
+                    I believe that great websites should not only look attractive but
+                    also provide excellent performance, accessibility, and user experience.
+                    Every project I work on is built with attention to detail and a focus
+                    on quality.
+                </p>
+
+                <p>
+                    Apart from coding, I enjoy exploring new technologies, solving
+                    programming challenges, and working on creative projects that help
+                    me grow as a developer.
+                </p>
+
+                <a href="tel:8059232523" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

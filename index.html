@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh - The Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: monospace;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 50);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(131, 131, 199);
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 80vh;
+            padding: 40px;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .rightSection img {
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .purple {
+            color: rgb(168, 98, 252);
+        }
+
+        #element {
+            color: rgb(168, 98, 252);
+        }
+
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .firstSection>div {
+                width: 90%;
+            }
+
+            .leftSection {
+                font-size: 2rem;
+            }
+
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+
+        .btn {
+            padding: 11px 28px;
+            background: rgb(44, 17, 70);
+            color: white;
+            border: 2px solid rgb(170, 107, 228);
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: rgb(170, 107, 228);
+            box-shadow: 0 0 15px rgba(170, 107, 228, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Divyansh's Portfolio</div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Divyansh</span>
+                <div>And I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="Divyansh_Tyagi_Resume (1).pdf" download class="btn">Download Resume</a>
+                </div>
+            </div>
+
+            <div class="rightSection">
+                <img src="bg.png.png" alt="">
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+                'Web Developer',
+                'Programmer',
+                'Web Designer',
+                'Video Editor'
+            ],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+</body>
+
+</html>
